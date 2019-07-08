@@ -7,7 +7,7 @@ module "function" {
   memory_size           = var.memory_size
   name                  = var.name
   policy_arns           = var.policy_arns
-  policy_arns_count     = var.policy_arns_count
+  count                 = length(var.policy_arns)
   runtime               = var.runtime
   s3_bucket             = local.l3_repo
   s3_object_key         = var.l3_object_key
@@ -15,4 +15,3 @@ module "function" {
   timeout               = var.timeout
   version               = "3.0.0"
 }
-
