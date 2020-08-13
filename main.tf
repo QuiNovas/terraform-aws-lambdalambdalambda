@@ -13,6 +13,6 @@ module "function" {
   s3_object_key         = var.l3_object_key
   source                = "QuiNovas/lambda/aws"
   timeout               = var.timeout
-  version               = "3.0.0"
+  version               = "3.0.9"
 }
 
