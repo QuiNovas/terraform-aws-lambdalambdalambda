@@ -11,8 +11,9 @@ module "function" {
   runtime               = var.runtime
   s3_bucket             = local.l3_repo
   s3_object_key         = var.l3_object_key
-  source                = "QuiNovas/lambda/aws"
   tags                  = var.tags
   timeout               = var.timeout
+  
+  source                = "QuiNovas/lambda/aws"
   version               = "3.0.10"
 }
