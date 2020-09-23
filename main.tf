@@ -1,6 +1,7 @@
 module "function" {
   allow_self_invocation = var.allow_self_invocation
   dead_letter_arn       = var.dead_letter_arn
+  description           = var.description
   environment_variables = var.environment_variables
   handler               = var.handler
   kms_key_arn           = var.kms_key_arn
@@ -11,6 +12,7 @@ module "function" {
   s3_bucket             = local.l3_repo
   s3_object_key         = var.l3_object_key
   source                = "QuiNovas/lambda/aws"
+  tags                  = var.tags
   timeout               = var.timeout
-  version               = "3.0.1"
+  version               = "3.0.10"
 }

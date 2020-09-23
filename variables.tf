@@ -9,6 +9,12 @@ variable "dead_letter_arn" {
   type        = string
 }
 
+variable "description" {
+  description = "The description of lambda"
+  type        = string
+  default     = ""
+}
+
 variable "environment_variables" {
   default = {
     DEFAULT = "default"
@@ -54,6 +60,12 @@ variable "runtime" {
   description = "The runtime the function should use"
   type        = string
 }
+
+variable "tags" {
+  default     = {}
+  description = "The map of string of keys and values"
+  type        = map
+} 
 
 variable "timeout" {
   default     = 3
