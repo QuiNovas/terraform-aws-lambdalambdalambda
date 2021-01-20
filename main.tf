@@ -15,5 +15,5 @@ module "function" {
   timeout               = var.timeout
 
   source  = "QuiNovas/lambda/aws"
-  version = "3.0.11"
+  version = "3.0.12"
 }
